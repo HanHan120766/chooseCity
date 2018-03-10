@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="setting-cell" bindtap="onclickCell">
+    <view class="label">{{address}}</view>
+    <view class="icon-arrow"></view>
+  </view>
+  <view class="picker-layout" wx:if="{{isShowCityList}}" catchtap="cancelPicker">
+    <view class="pickerHeader">
+      <view class="cell1" catchtap="cancelPicker">取消</view>
+      <view class="cell2" catchtap="confirmPicker">确定</view>
+    </view>
+    <picker-view  catchtap="cancelCover"  class="picker-view" indicator-class="addr-item" style="width: 100%; height: 200px;" value="{{pickerValue}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{cityData}}" wx:key="" class="addr-item">{{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{cityData[pickerValue[0]].children}}" wx:key="" class="addr-item">{{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{cityData[pickerValue[0]].children[pickerValue[1]].children}}" wx:key="" class="addr-item">{{item.name}}</view>
+      </picker-view-column>
+    </picker-view>
+    <view wx:if="{{isShowDivision}}" class="picker-cover" catchtap="cancelCover"  style="height:{{coverHeight}}px;"></view>
+  </view>
+</view>

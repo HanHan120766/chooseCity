@@ -1,0 +1,60 @@
+/**index.wxss**/
+.setting-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.setting-cell .label {
+  color: #000;
+  font-size: 30rpx;
+}
+.setting-cell .icon-arrow {
+  width: 10rpx;
+  height: 16rpx;
+  background: url('https://asset.yit.com/xcx/icon/arrow-left-icon.png') no-repeat;
+  background-size: 100% 100%;
+}
+.picker-layout {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.addr-item {
+  text-align: center;
+  height: 80rpx!important;
+  line-height: 80rpx;
+}
+.picker-layout picker-view {
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.pickerHeader {
+  background: #fff;
+  position: absolute;
+  bottom: 400rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 690rpx;
+  border-bottom: 1px solid #f9f9f9;
+  padding: 0 30rpx;
+}
+.pickerHeader .cell1 {
+  width: 345rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #666;
+}
+.pickerHeader .cell2 {
+  width: 345rpx;
+  text-align: right;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #b42a2a;
+}
